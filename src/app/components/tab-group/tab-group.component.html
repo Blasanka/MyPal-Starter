@@ -1,0 +1,27 @@
+<mat-tab-group>
+  <mat-tab label="Diary">
+    <mat-card *ngFor="let spaceScreen of spaceScreens; let i = index">
+      <!-- <img mat-card-image src="{{ spaceScreen.img }}" alt="" srcset=""> -->
+      <mat-card-content>
+        <p>{{ spaceScreen.description }}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button (click)="likeMe(i)">
+          <i class="material-icons md-18" [ngClass]="{'red-color': spaceScreen.liked == '1'}">favorite</i> FAVORITE
+        </button>
+        <button mat-button (click)="deleteMe(i)">
+          <i class="material-icons md-18">delete</i> DELETE
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-tab>
+  <mat-tab label="Settings">
+    <div id='page-padding'>
+      <h1>Settings</h1>
+      <p>Here you can control your various mind</p>
+      <label>Number of thumbnails</label>
+      <mat-slider class="md-slider-horizontal" showTicks='true' max='100' min='0' step='1' thumbLabel='true' value='18'></mat-slider>
+      <mat-slide-toggle>Some Setting</mat-slide-toggle>
+    </div>
+  </mat-tab>
+</mat-tab-group>

@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.red-color {
+    color: rgb(235, 5, 5);
+}
+
+.md-slider-horizontal {
+    width: 100%;
+}
+
+label {
+    font-weight: bold;
+    margin: 1.5em 0;
+    display: block;
+}
+
+#page-padding {
+    padding: 0 0.5em 1.5em 1.5em;
+}

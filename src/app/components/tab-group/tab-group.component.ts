@@ -1,12 +1,11 @@
-import { Component } from '@angular/core';
-import { Http } from '@angular/http';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-tab-group',
+  templateUrl: './tab-group.component.html',
+  styleUrls: ['./tab-group.component.css']
 })
-export class AppComponent {
+export class TabGroupComponent implements OnInit {
   spaceScreens: Array<any>;
 
   // constructor(private http: Http) {
@@ -32,6 +31,9 @@ export class AppComponent {
             liked: 0
         }
       ];
+  }
+
+  ngOnInit() {
   }
 
   likeMe(i) {
